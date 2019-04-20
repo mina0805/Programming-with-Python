@@ -21,5 +21,5 @@ elif number == 8:
 elif number == 9:
     print("nine")
 else:
-    print("number too big")
+    print("number is too big")
 
