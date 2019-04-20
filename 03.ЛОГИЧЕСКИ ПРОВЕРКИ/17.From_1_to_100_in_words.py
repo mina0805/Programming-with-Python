@@ -16,7 +16,8 @@ elif 20 <= num <= 100:
 elif num <= 0:
     print('invalid number')
 elif num > 100:
-    print('invalid')
+    print('invalid entry')
+
 
 
 
