@@ -22,7 +22,37 @@ y = int(input())
 if ((0 < x < 3*h and 0 < y < h)) or (h <x <2*h and 0 < y < 4*h):
     print('inside')
 
-elif (0 <= x <= 3*h and y == 0) or (x == 0 and 0 <= y <= h) or 0 <= x <= h and h <=y <= 4*h or h <= x <= 2*h and y == 4*h or x == 2*h and h <= y <= 4*h or 2*h <= x <= 3*h and y == h or x == 3*h and 0<= y <= h:
+    #1
+elif (0 <= x <= 3*h and y == 0):
     print('border')
+
+    #2
+elif (x == 0 and 0 <= y <= h):
+    print('border')
+
+    #3
+elif (0<=x<=h and y==h):
+    print('border')
+
+    #4
+elif (x == h and h <= y <= 4*h):
+    print('border')
+
+    #5
+elif (h<=x<=2*h and y == 4*h):
+    print('border')
+
+    #6
+elif(x == 2*h and h <= y <= 4*h):
+    print('border')
+
+    #7
+elif 2*h<= x <= 3*h and y == h:
+    print('border')
+
+    #8
+elif x == 3*h and 0 <= y <= h:
+    print('border')
+
 else:
     print('outside')
