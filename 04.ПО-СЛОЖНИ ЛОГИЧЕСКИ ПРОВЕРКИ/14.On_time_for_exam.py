@@ -15,25 +15,42 @@ arrival_m = int(input("arrival minute 0 - 59: "))
 # late if:
 late_1 = (exam_h == arrival_h) and (exam_m < arrival_m)
 late_2 = (exam_h < arrival_h) and (exam_m == arrival_m)
-late_3 = (exam_h < arrival_h) and (exam_m < arrival_m)
+#late_3 = (exam_h < arrival_h) and (exam_m < arrival_m)
+#late_4 = (exam_h < arrival_h) and (exam_m < arrival_m)
+late_5 = (arrival_h - exam_h) == 1 and exam_m > arrival_m
+late_10 = (arrival_h - exam_h) == 1 and exam_m < arrival_m
+late_6 = (arrival_h - exam_h) == 1 and exam_m < arrival_m and ((arrival_m - exam_m) < 9)
+late_9 = (arrival_h - exam_h) == 1 and exam_m < arrival_m and ((arrival_m - exam_m) > 9)
+late_7 = (arrival_h - exam_h) > 1 and exam_m > arrival_m
+late_8 = (arrival_h - exam_h) > 1 and exam_m < arrival_m
 
+
+
+#early if:
+
+if late_1 or late_2 or late_5 or late_6 or late_7 or late_8 or late_9 or late_10:
+    print("late")
+    if late_1:
+        print((str(arrival_m - exam_m)) + ' minutes after the the start')
+
+    elif late_2:
+        print(str(arrival_h - exam_h) + ":00 hours after the start")
+    elif late_5:
+        print((str(60 - (exam_m - arrival_m))) + " minutes after start")
+    elif late_6:
+        print("1:0") + (str(arrival_m - exam_m)) + " hours after the start"
+    elif late_9:
+        print("1:") + (str(arrival_m - exam_m)) + " hours after the start"
+    elif late_7:
+        print(str(arrival_h - exam_m - 1)), ":", (str(60 - (exam_m - arrival_m)) + " hours after the start")
+    elif late_8:
+        print(str(arrival_h - exam_h)) + ":" + (str(arrival_m - exam_m)) + " hours after the start"
+    elif late_10:
+        print(str(60 - (exam_m - arrival_m))) + " minutes after start"
 #on time:
 on_time_1 = (exam_h == arrival_h) and (exam_m == arrival_m)
 on_time_2 = (exam_h == arrival_h) and ((exam_m - arrival_m) <= 30)
 on_time_3 = ((exam_h - arrival_h) == 1) and (((60 - arrival_m) + exam_m) <= 30)
-
-#early if:
-
-if late_1 or late_2 or late_3:
-    print("late")
-    if late_1:
-        print((str(arrival_m - exam_m)) + ' minutes after the the start')
-    if late_2:
-        print(str(arrival_h - exam_h) + ":00 hours after the start")
-    if late_3 and ((arrival_m - exam_m) >= 10):
-        print(str(arrival_h - exam_h) + ":" +(str(arrival_m - exam_m) + " hours after the start"))
-    if late_3 and ((arrival_m - exam_m)< 10):
-        print(str(arrival_h - exam_h) + ":0" + (str(arrival_m - exam_m) + " hours after the start"))
 
 if on_time_1 or on_time_2 or on_time_3:
     print('on time')
