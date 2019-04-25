@@ -24,8 +24,6 @@ late_9 = (arrival_h - exam_h) == 1 and exam_m < arrival_m and ((arrival_m - exam
 late_7 = (arrival_h - exam_h) > 1 and exam_m > arrival_m
 late_8 = (arrival_h - exam_h) > 1 and exam_m < arrival_m
 
-
-
 #early if:
 
 if late_1 or late_2 or late_5 or late_6 or late_7 or late_8 or late_9 or late_10:
