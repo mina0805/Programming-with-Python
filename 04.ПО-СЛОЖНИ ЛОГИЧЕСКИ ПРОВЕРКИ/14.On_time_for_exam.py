@@ -15,8 +15,6 @@ arrival_m = int(input("arrival minute 0 - 59: "))
 # late if:
 late_1 = (exam_h == arrival_h) and (exam_m < arrival_m)
 late_2 = (exam_h < arrival_h) and (exam_m == arrival_m)
-#late_3 = (exam_h < arrival_h) and (exam_m < arrival_m)
-#late_4 = (exam_h < arrival_h) and (exam_m < arrival_m)
 late_5 = (arrival_h - exam_h) == 1 and exam_m > arrival_m
 late_10 = (arrival_h - exam_h) == 1 and exam_m < arrival_m
 late_6 = (arrival_h - exam_h) == 1 and exam_m < arrival_m and ((arrival_m - exam_m) < 9)
@@ -45,7 +43,9 @@ if late_1 or late_2 or late_5 or late_6 or late_7 or late_8 or late_9 or late_10
         print(str(arrival_h - exam_h)) + ":" + (str(arrival_m - exam_m)) + " hours after the start"
     elif late_10:
         print(str(60 - (exam_m - arrival_m))) + " minutes after start"
+
 #on time:
+
 on_time_1 = (exam_h == arrival_h) and (exam_m == arrival_m)
 on_time_2 = (exam_h == arrival_h) and ((exam_m - arrival_m) <= 30)
 on_time_3 = ((exam_h - arrival_h) == 1) and (((60 - arrival_m) + exam_m) <= 30)
@@ -59,6 +59,8 @@ if on_time_1 or on_time_2 or on_time_3:
         print((str(exam_m - arrival_m)) + " minutes before the start")
     elif on_time_3:
         print((str((60 - arrival_m) + exam_m) + " minutes before the start"))
+
+# early:
 
 early_1 = ((exam_h - arrival_h) > 1) and (exam_m == arrival_m)
 early_2 = ((exam_h - arrival_h) == 1) and ((60 - (exam_m - arrival_m)) < 30)
@@ -84,4 +86,6 @@ if early_1 or early_2 or early_3 or early_4 or early_5:
     elif early_7:
         print(str(exam_h - arrival_h - 1) + ":0" + (str(60 - (arrival_m - exam_m))+ " hours before the start"))
 
+else:
+    print('BEGAI MAANI SA CHE MI PISNA!')
 
