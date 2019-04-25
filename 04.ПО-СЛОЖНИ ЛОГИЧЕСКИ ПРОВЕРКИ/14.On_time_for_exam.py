@@ -47,21 +47,26 @@ if on_time_1 or on_time_2 or on_time_3:
 
 early_1 = ((exam_h - arrival_h) > 1) and (exam_m == arrival_m)
 early_2 = ((exam_h - arrival_h) == 1) and ((60 - (exam_m - arrival_m)) < 30)
-early_3 = ((exam_h - arrival_h) > 1) and ((60 - (exam_m - arrival_m)) < 30)
-early_4 = ((exam_h - arrival_h) > 1) and ((60 - (arrival_m - exam_m)) < 30)
+early_3 = ((exam_h - arrival_h) > 1) and exam_m > arrival_m and ((exam_m - arrival_m) > 9)
+early_6 = ((exam_h - arrival_h) > 1) and exam_m > arrival_m and ((exam_m - arrival_m) < 9)
+early_4 = ((exam_h - arrival_h) > 1) and exam_m < arrival_m and ((60 - (arrival_m - exam_m)) > 9)
+early_7 = ((exam_h - arrival_h) > 1) and exam_m < arrival_m and ((60 - (arrival_m - exam_m)) < 9)
 early_5 = (exam_h == arrival_h) and ((60 - arrival_m) > 30)
 
 if early_1 or early_2 or early_3 or early_4 or early_5:
     print('early')
 
     if early_1:
-        print((str(exam_h - arrival_h) + ":00 before exam start"))
+        print((str(exam_h - arrival_h) + ":00 hours before the start"))
     elif early_2:
-        print((str(60 - arrival_m)) + " hours before exam start")
+        print((str(60 - arrival_m)) + " minutes before the start")
     elif early_3:
-        print((str(exam_h - arrival_h - 1) + ":" + (str(60 - (exam_m - arrival_m)) + " hours before exam start")))
+        print((str(exam_h - arrival_h) + ":" + (str(exam_m - arrival_m) + " hours before the start")))
     elif early_4:
-        print(str(exam_h - arrival_h) + ":" + (str(60 - (arrival_m - exam_m)) + " hours before exam start"))
-
+        print(str(exam_h - arrival_h - 1) + ":" + (str(60 - (arrival_m - exam_m)) + " hours before the start"))
+    elif early_6:
+        print((str(exam_h - arrival_h) + ":0" + (str(exam_m - arrival_m) + " hours before the start")))
+    elif early_7:
+        print(str(exam_h - arrival_h - 1) + ":0" + (str(60 - (arrival_m - exam_m))+ " hours before the start"))
 
 
