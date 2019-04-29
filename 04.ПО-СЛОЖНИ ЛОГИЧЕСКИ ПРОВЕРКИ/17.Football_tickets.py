@@ -6,7 +6,7 @@
    # • От 25 до 49 – 40% от бюджета.
     #• 50 или повече – 25% от бюджета.
 # “Yes! You have {N} leva left.
-# Not enough money! You need {М} leva
+# Not enough money! You need {М} lev
 
 budget = float(input())
 category = input().lower()
