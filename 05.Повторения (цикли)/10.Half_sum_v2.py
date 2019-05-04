@@ -15,7 +15,7 @@ if final_sum == biggest_num:
     print('Yes')
     print('Sum = ' + str(biggest_num))
 else:
-    print('No')
+    print('no')
     print('Diff = ' + str(abs(biggest_num - final_sum)))
 
 
