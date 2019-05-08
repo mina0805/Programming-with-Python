@@ -86,6 +86,3 @@ if early_1 or early_2 or early_3 or early_4 or early_5:
     elif early_7:
         print(str(exam_h - arrival_h - 1) + ":0" + (str(60 - (arrival_m - exam_m))+ " hours before the start"))
 
-else:
-    print('BEGAI MAANI SA CHE MI PISNA!')
-
