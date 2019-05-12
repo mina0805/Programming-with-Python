@@ -15,7 +15,7 @@ tot_money = money + (toy_price * toy_number)
 if tot_money >= laundry_m_price:
     print('Yes!', str("%.2f" % (tot_money - laundry_m_price)))
 else:
-    print('No', str("%.2f" % (laundry_m_price - tot_money)))
+    print('No!', str("%.2f" % (laundry_m_price - tot_money)))
 
 
 
