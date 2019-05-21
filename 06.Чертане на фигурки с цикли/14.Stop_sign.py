@@ -1,10 +1,11 @@
 n = int(input())
 # hight = 2 * n + 2
-# dotloop = n
+# dot1stloop = n
 # 1st line n+1 "." on each side, N*2 + 1 * "-" in the middle
 # 2nd line dots, // on each side + n * 2 - 1 "-"
 # 3rd line dots, // on each side, n*2 + 1 "-"
 # middle line not including // and \\ is n*4 - 1 characters, stop! in the middle -> dashes each side = n*4 -1 - 5 //2
+
 mid_dash = ((n*4)-6)//2
 dot_1st_line = n + 1
 dash_1st_line = n * 2 + 1
