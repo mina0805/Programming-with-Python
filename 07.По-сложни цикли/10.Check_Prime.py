@@ -4,8 +4,7 @@ import math
 
 if n < 2:
     is_prime = False
-elif n == 10:
-    print("Not Prime")
+
 else:
     square_n = math.floor(math.sqrt(n))
     for i in range(2,square_n+1):
