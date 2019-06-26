@@ -1,4 +1,4 @@
-_n = int(input())
+n = int(input())
 l = int(input())
 first_letter = 97
 last_letter = 97+l
