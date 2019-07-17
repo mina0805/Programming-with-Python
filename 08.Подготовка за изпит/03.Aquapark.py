@@ -2,7 +2,7 @@ month = input().lower
 hours = float(input())
 people = int(input())
 day_night = input().lower()
-per_h = 1
+per_h = 0
 
 if month == "march" or month == "april" or month == "may":
     if day_night == "day":
