@@ -17,7 +17,7 @@ elif month == "june" or month == "july" or month == "august":
         per_h = 12.6
     elif day_night == "night":
         per_h = 10.2
-        price_per_person = per_h * hours
+        price_per_person = per_h - hours
         total_price = price_per_person * people
 
 price_per_person = hours * per_h
