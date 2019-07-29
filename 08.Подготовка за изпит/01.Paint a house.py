@@ -9,5 +9,5 @@ green = (front_side+back_side+sides)/3.4
 
 roof = x*y*2 + x*h
 red = roof/4.3
-print('%.2f' % gren)
+print('%.2f' % green)
 print('%.2f' % red)
