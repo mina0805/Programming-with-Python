@@ -6,7 +6,7 @@ if age >= 16:
         print("Mr.")
     elif gender =="f" or gender == "F":
         print("Ms.")
-elif age < 16:
+elif 0 < age < 16:
     if gender == "m" or gender == "M":
         print("Master.")
     elif gender =="f" or gender == "F":
