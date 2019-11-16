@@ -12,23 +12,21 @@ for i in range(0, n):
     num = int(input())
 
     if 0 < num < 200:
-        sum_p1 += i
+        sum_p1 += 1
     elif 200 <= num <= 399:
-        sum_p2 += i
+        sum_p2 += 1
     elif 400 <= num <= 599:
-        sum_p3 += i
+        sum_p3 += 1
     elif 600 <= num <= 799:
-        sum_p4 += i
+        sum_p4 += 1
     elif 800 <= num:
-        sum_p5 += i
+        sum_p5 += 1
 
-total = sum_p1 + sum_p2 + sum_p3 + sum_p4 + sum_p5
-
-print('{0:.2%}'.format(sum_p1/total))
-print('{0:.2%}'.format(sum_p2/total))
-print('{0:.2%}'.format(sum_p3/total))
-print('{0:.2%}'.format(sum_p4/total))
-print('{0:.2%}'.format(sum_p5/total))
+print('{0:.2%}'.format(sum_p1/n))
+print('{0:.2%}'.format(sum_p2/n))
+print('{0:.2%}'.format(sum_p3/n))
+print('{0:.2%}'.format(sum_p4/n))
+print('{0:.2%}'.format(sum_p5/n))
 
 
 
