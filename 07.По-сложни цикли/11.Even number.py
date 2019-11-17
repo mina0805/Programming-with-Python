@@ -1,4 +1,4 @@
-n = int(input('Enter even number: '))
+n = float(input('Enter even number: '))
 
 while n%2 > 0:
     print('Invalid number')
