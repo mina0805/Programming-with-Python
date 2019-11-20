@@ -3,17 +3,20 @@ dot_right = 1
 pound = 1
 row1 = 1
 n = int(input())
-for row1 in range(n//2):
-    dot_left = n + row1
-    dot_right = n + row1
-    pound = 3*n - row1 *2
-    print(dot_left * (".") + (pound * ("#")) + (dot_right * (".")))
-for row2 in range(n//2+1):
-    dot_left2 = n + n//2 +row2
-    dot_right2 = n + n//2 +row2
-    inside_dot = (((n*5)-2)-dot_left2-dot_right2)
-    pound2 = 1
-    print(dot_left2 * ("."))
+for row1 in range(n+1):
+    if row1 < n//2:
+        dot_left = n + row1
+        dot_right = n + row1
+        pound = 3*n - row1 *2
+        inside_dot = 0
+        print(dot_left * (".") + (pound * ("#")) + (dot_right * (".")))
+    elif row1 >= n//2:
+        dot_left = n+row1
+        dot_right = n+row1
+        pound = 1
+        inside_dot = (5*n) - (dot_left + 2 + dot_right)
+        print((dot_left * (".") + (pound * ("#")) + (inside_dot * (".")) + (pound * ("#")) + (dot_right * ("."))))
+
 
 
 
