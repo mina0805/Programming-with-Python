@@ -16,7 +16,13 @@ for row1 in range(n+1):
         pound = 1
         inside_dot = (5*n) - (dot_left + 2 + dot_right)
         print((dot_left * (".") + (pound * ("#")) + (inside_dot * (".")) + (pound * ("#")) + (dot_right * ("."))))
-
+for row2 in range(n//2 + 1):
+    dot = (".")
+    pound2 = ('#')
+    if row2 == 0:
+        print(2*n* ('.') + (n * ("#")) + (2*n * (".")))
+    elif 0 < row2 <= n//2 +1:
+        print((2*n - 2)* ('.') + ((n+4) * ("#")) + ((2*n -2 )* (".")))
 
 
 
