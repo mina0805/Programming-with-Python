@@ -20,16 +20,15 @@ for row2 in range(n//2 + 1):
     dot = (".")
     pound2 = ('#')
     if row2 == 0:
-        print(2*n* ('.') + (n * ("#")) + (2*n * (".")))
+        print(2*n* '.' + (n * "#") + (2*n * (".")))
     elif 0 < row2 <= n//2 +1:
-        print((2*n - 2)* ('.') + ((n+4) * ("#")) + ((2*n -2 )* (".")))
+        print((2*n - 2)* '.' + ((n+4) * "#") + ((2*n -2 )* "."))
 
-#dot4 = (((5*n)-10)//2)
-#d = "D^A^N^C^E^"
-#print(str(dot4 * ("."))) + str(d) + (str(dot4 * (".")))
-#print(dot4 * ".")) 
+dot4 = ((((5*n)-10)//2)* ".")
+d = "D^A^N^C^E^"
+print(f"{dot4}{d}{dot4}")
 
-for row3 in range(n//2 +1):
+for row3 in range(1,n//2 +2):
     print((2 * n - 2) * ('.') + ((n + 4) * ("#")) + ((2 * n - 2) * (".")))
 
 
