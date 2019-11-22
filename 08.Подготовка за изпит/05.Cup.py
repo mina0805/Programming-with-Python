@@ -24,7 +24,13 @@ for row2 in range(n//2 + 1):
     elif 0 < row2 <= n//2 +1:
         print((2*n - 2)* ('.') + ((n+4) * ("#")) + ((2*n -2 )* (".")))
 
+#dot4 = (((5*n)-10)//2)
+#d = "D^A^N^C^E^"
+#print(str(dot4 * ("."))) + str(d) + (str(dot4 * (".")))
+#print(dot4 * ".")) 
 
+for row3 in range(n//2 +1):
+    print((2 * n - 2) * ('.') + ((n + 4) * ("#")) + ((2 * n - 2) * (".")))
 
 
 
