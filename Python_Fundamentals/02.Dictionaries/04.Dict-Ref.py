@@ -1,4 +1,15 @@
-str_input = input()
-Dict = dict((x.strip(), y.strip()) for x, y in (element.split('=') for element in str_input.split(', ')))
+data = input()
+name = data.split()[0]
+num = data.split()[1]
+my_dict = {}
+while not input() == "end":
+    if name not in my_dict.keys():
+        my_dict[name] = num
+print(my_dict)
 
-print(Dict)
+        # if key not in d.keys():
+#     d[key] = value
+
+
+
+
