@@ -1,14 +1,28 @@
-l = int(input())
-w = int(input())
-size = l*w
-pieces_taken = int(input())
-pieces_remaining = size
+guests_or_stop = input().lower()
+action = False
 
-while size/pieces_taken >= 1:
-    pieces_taken = int(input())
-    pieces_taken += pieces_taken
-    if size/pieces_remaining <1:
-        print("stop")
+size = length * width
+while not action:
+    if guests_or_stop != "stop":
+        size = size - int(guests_or_stop)
+
+        if size <= 0:
+            print(f'No more cake left! You need {abs(size)} pieces more.')
+            action = True
+    else:
+        print(f"{size} pieces are left.")
+        break
+    guests_or_stop = input().lower()
+
+
+
+
+
+
+
+
+
+
 
 
 
