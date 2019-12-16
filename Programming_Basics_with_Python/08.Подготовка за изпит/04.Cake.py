@@ -1,3 +1,5 @@
+length = int(input())
+width = int(input())
 guests_or_stop = input().lower()
 action = False
 
@@ -11,7 +13,7 @@ while not action:
             action = True
     else:
         print(f"{size} pieces are left.")
-        break
+        action = True
     guests_or_stop = input().lower()
 
 
