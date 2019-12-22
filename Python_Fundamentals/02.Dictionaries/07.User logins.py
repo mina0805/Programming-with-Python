@@ -5,22 +5,17 @@ unsuccessful_logins = 0
 
 while raw_data != 'login':
     login, password = raw_data.split('->')
-    for i in raw_data:
+    for i in login, password:
         if i != " ":
             login_dict[login] = password
-    raw_data = input()
 
-raw_data = input()
-
-while raw_data != 'end':
+while raw_data != "end":
     login, password = raw_data.split('->')
-    print(login, password)
-    #if login_dict.get(login) == password:
-        print(f'{login}: logged in successfully')
-    else:
-        print(f'{login}: login failed')
-        unsuccessful_logins += 1
-
-    raw_data = input()
-
-print("unsuccessful login attempts:", unsuccessful_logins)
+    for i in login, password:
+        if i != " ":
+            if login_dict[login] == password:
+                print(f'{login}: logged in successfully')
+            else:
+                print(f'“{login}: login failed”. ')
+                unsuccessful_logins +=1
+                print(f'unsuccessful login attempts: {unsuccessful_logins}')
