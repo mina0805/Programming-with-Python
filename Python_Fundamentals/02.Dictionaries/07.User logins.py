@@ -14,9 +14,15 @@ raw_data = input()
 
 while raw_data != "end":
     user_name, password = raw_data.split('->')
-    if login_dict[user_name] == password:
-        print(f'{user_name}: logged in successfully')
+    if user_name in login_dict:
+        if login_dict[user_name] == password:
+            print(f'{user_name}: logged in successfully')
+        elif login_dict[user_name] != password:
+            unsuccessful_logins += 1
+            print(f'“{user_name}: login failed”. ')
+
         raw_data = input()
+
     else:
         print(f'“{user_name}: login failed”. ')
         unsuccessful_logins += 1
