@@ -24,5 +24,5 @@ for key in dict_clothes:
     for val in dict_clothes[key]:
         if lookup_item[0] == key and lookup_item[1] == val:
             print(f'* {val} - {dict_clothes[key][val]} (found!)')
-        else
+        else:
             print(f'* {val} - {dict_clothes[key][val]}')
