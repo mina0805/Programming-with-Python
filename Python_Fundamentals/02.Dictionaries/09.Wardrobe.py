@@ -18,10 +18,12 @@ for i in range(n):
             clothes_dict[color][item] = 1
 searched_item = input().split()
 
-    for key in clothes_dict:
-        print(f'{key} clothes:')
-        for value in clothes_dict:
-            if searched_item[0] == key and searched_item[1] == value:
-                print(f'*{value} -{clothes_dict[key][value]} found!')
-            else:
-                print(f'*{value} - {clothes_dict[key][value]}')
+for key in clothes_dict:
+    print(f'{key} clothes:')
+    for value in clothes_dict:
+        if searched_item[0] == key and searched_item[1] == value:
+            print(f'*{value} -{clothes_dict[key][value]} (found!)')
+        #else:
+            #print(f'* {value} - {clothes_dict[key][value]}')
+#
+            #print(f'* {value} - {clothes_dict[key][value]}')
