@@ -23,7 +23,7 @@ for key in clothes_dict:
     for value in clothes_dict:
         if searched_item[0] == key and searched_item[1] == value:
             print(f'*{value} -{clothes_dict[key][value]} (found!)')
-        #else:
-            #print(f'* {value} - {clothes_dict[key][value]}')
+        else:
+            print(f'*{value} -{clothes_dict[value]}')
 #
             #print(f'* {value} - {clothes_dict[key][value]}')
