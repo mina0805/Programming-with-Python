@@ -1,24 +1,19 @@
-raw_data = input().lower()
+raw_data = input()
 shells = {}
-mylist = []
-
-while raw_data != "aggregate":
-
-    mylist = list(map(str.strip, raw_data.split(" ")))
-    key = mylist[0]
-    value = mylist[1]
-
-# import list of year,value pairs
-
-    for key,value in mylist:
-        try:
-            shells[key].append(value)
-        except KeyError:
-            shells[key] = [value]
-    raw_data = input().lower()
-
-for i in shells:
-    print(i)
 
 
+while raw_data != "Aggregate":
+    region, size = raw_data.split()
+    if region not in shells:
+        shells[region] = []
+    if int(size) not in shells[region]:
+        shells[region].append(int(size))
+
+    raw_data = input()
+for key in shells:
+    giant_shell = (sum(shells[key]) - int((sum(shells[key])//len(shells[key]))))
+
+    print(f'{key} -> ', end='')
+    print(f'{str(shells[key])}', end='')
+    print(f' ({giant_shell})')
 
