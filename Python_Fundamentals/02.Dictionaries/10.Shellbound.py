@@ -13,7 +13,8 @@ while raw_data != "Aggregate":
 for key in shells:
     giant_shell = (sum(shells[key]) - int((sum(shells[key])//len(shells[key]))))
 
-    print(f'{key} -> ', end='')
+    print(f'{"".join(key)} -> ', end='')
     print(f'{str(shells[key])}', end='')
     print(f' ({giant_shell})')
 
+#print(" ".join(["{:g}".format(item)]), end=" ")
