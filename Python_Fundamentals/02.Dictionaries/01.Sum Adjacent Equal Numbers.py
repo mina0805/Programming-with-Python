@@ -7,12 +7,14 @@ print(list_num)
         #list_num.remove(list_num[0])
 
 i = 0
-while i < (len(list_num)-1):
-    if list_num[i] == list_num[i+1] and 1 >= 0:
-        list_num[i] += list_num[i+1]
-        list_num.remove(list_num[i+1])
+while i < (len(list_num) - 1):
+    if list_num[i] == list_num[i + 1] and i >= 0:
+        list_num[i] += list_num[i + 1]
+        list_num.remove(list_num[i + 1])
         i -= 1
     else:
         i += 1
-print(list_num)
+
+for item in list_num:
+    print(" ".join(["{:g}".format(item)]), end=" ")
 
