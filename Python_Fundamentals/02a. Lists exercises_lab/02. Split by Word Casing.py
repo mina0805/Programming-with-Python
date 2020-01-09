@@ -20,6 +20,6 @@ for i in new_list:
 
 print('Lower-case:', ', '.join(lower_list))
 print('Upper-case:', ', '.join(upper_list))
-print('Mixed-list', ', '.join(mixed_list))
+print('Mixed-list:', ', '.join(mixed_list))
 #print('Lower-case:', ', '.join(lower_case_list))
 
