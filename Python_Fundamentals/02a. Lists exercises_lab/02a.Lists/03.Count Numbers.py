@@ -1,2 +1,2 @@
 raw_data = list(map(int, input().split()))
-ascending_lit = sorted(raw_data)
+ascending_list = sorted(raw_data)
