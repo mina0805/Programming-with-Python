@@ -5,7 +5,7 @@ student_grades = {
     'alex':[2,2],
 }
 
-# 1 sort by ke
+# 1 sort by key
 sort_by_key = sorted(student_grades.items(), key = lambda kvp: kvp[0])
 print(sort_by_key)
 
