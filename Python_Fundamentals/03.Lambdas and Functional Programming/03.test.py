@@ -1,7 +1,7 @@
 student_grades = {
     'bob': [2,2],
     'petar':[5,2,5],
-    'mara':[1,6,5,6],
+    'maria':[1,6,5,6],
     'alex':[2,2],
 }
 
