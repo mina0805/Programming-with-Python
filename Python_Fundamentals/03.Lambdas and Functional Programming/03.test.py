@@ -6,7 +6,7 @@ student_grades = {
 }
 
 # 1 sort by key
-sort_by_key = sorted(student_grades.items(), key = lambda kvp: kvp[0])
+sort_by_key = sorted(student_grades.items(), key = lambda kvp: kvp[1])
 print(sort_by_key)
 
 # 2 sort by value
