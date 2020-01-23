@@ -4,19 +4,24 @@ class Point:
         self.x = x
         self.y = y
 
+def calc_side_c(a, b):
+    c = math.sqrt(a**2 + b**2)
+    return c
 
-raw_data = list(map(float, input().split(" ")))
-x1 = raw_data[0]
-y1 = raw_data[1]
-x2 = raw_data[2]
-y2 = raw_data[3]
+first_point_input = list(map(float,input().split()))
+second_point_input = list(map(float, input().split()))
 
-first_point = Point(x1, y1)
-second_point = Point(x2, y2)
+x1 = first_point_input[0]
+y1 = first_point_input[1]
+x2 = second_point_input[0]
+y2 = second_point_input[1]
 
-side_a = abs(first_point.x + second_point.x)
-side_b = abs(first_point.y + second_point.y)
-side_c = math.sqrt(pow(side_a,2) + pow(side_b,2))
+first_point_object = Point(x=x1, y=y1)
+second_point_object = Point(x=x2, y=y2)
 
+side_a = abs(first_point_object.x - second_point_object.x)
+side_b = abs(first_point_object.y - second_point_object.y)
+
+side_c = calc_side_c(side_a, side_b)
 print(side_c)
 
