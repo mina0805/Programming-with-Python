@@ -23,5 +23,5 @@ side_a = abs(first_point_object.x - second_point_object.x)
 side_b = abs(first_point_object.y - second_point_object.y)
 
 side_c = calc_side_c(side_a, side_b)
-print(side_c)
+print(f'{side_c:.3f}')
 
